@@ -5,11 +5,11 @@ function myFunction() {
 
   if (dots.style.display === "none") {
     dots.style.display = "inline";
-    btnText.innerHTML = "Read more"; 
+    btnText.innerHTML = "Read more";
     moreText.style.display = "none";
   } else {
     dots.style.display = "none";
-    btnText.innerHTML = "Read less"; 
+    btnText.innerHTML = "Read less";
     moreText.style.display = "inline";
   }
 }
@@ -85,40 +85,44 @@ function activeMenu() {
 activeMenu();
 window.addEventListener("scroll", activeMenu);
 
-
 const header = document.querySelector("header");
-window.addEventListener("scroll",function(){
-  header.classList.toggle("sticky",window.scrollY > 50)
-})
+window.addEventListener("scroll", function () {
+  header.classList.toggle("sticky", window.scrollY > 50);
+});
 
 let menuIcon = document.querySelector("#menu-icon");
 let navlist = document.querySelector(".navlist");
 
-menuIcon.onclick = ()=>{
+menuIcon.onclick = () => {
   menuIcon.classList.toggle("bx-x");
   navlist.classList.toggle("open");
-}
+};
 
-window.onscroll = ()=>{
+window.onscroll = () => {
   menuIcon.classList.remove("bx-x");
   navlist.classList.remove("open");
-}
+};
 
-const observer = new IntersectionObserver((enteries)=>{
-  enteries.forEach((entery)=>{
-    if(entery.isIntersecting){
+const observer = new IntersectionObserver((enteries) => {
+  enteries.forEach((entery) => {
+    if (entery.isIntersecting) {
       entery.target.classList.add("show-items");
-    }else{
+    } else {
       entery.target.classList.remove("show-items");
     }
   });
 });
 
 const scrollScale = document.querySelectorAll(".scroll-scale");
-scrollScale.forEach((el)=>observer.observe(el));
+scrollScale.forEach((el) => observer.observe(el));
 
 const scrollBottom = document.querySelectorAll(".scroll-bottom");
-scrollBottom.forEach((el)=>observer.observe(el));
+scrollBottom.forEach((el) => observer.observe(el));
 
 const scrollTop = document.querySelectorAll(".scroll-top");
-scrollTop.forEach((el)=>observer.observe(el));
+scrollTop.forEach((el) => observer.observe(el));
+
+window.history.pushState(null, "", window.location.href);
+window.addEventListener("popstate", function (event) {
+  window.history.pushState(null, "", window.location.href);
+});
