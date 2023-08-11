@@ -122,3 +122,11 @@ scrollBottom.forEach((el)=>observer.observe(el));
 
 const scrollTop = document.querySelectorAll(".scroll-top");
 scrollTop.forEach((el)=>observer.observe(el));
+
+
+function redirectToSuccess() {
+  setTimeout(function() {
+    window.location.href = "https://sanyuaung.vercel.app/success.html";
+  }, 3000); 
+}
+window.onload = redirectToSuccess;
