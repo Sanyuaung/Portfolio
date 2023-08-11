@@ -129,6 +129,110 @@ section {
   grid-gap: 4em;
 }
 
+.custom-swal-icon {
+  font-size: 50px!important;
+  color: var(--hover-color)!important;
+  border:2px solid #39ff14!important;
+  border-radius: 50%!important;
+  background: var(--bg-color)!important;
+}
+
+#h3{
+  color: var(--text-color)!important;
+  font-size: var(--bg-font)!important;
+  font-weight: 200px!important;
+  text-transform: uppercase!important;
+}
+
+#p{
+  color: var(--text-color)!important
+}
+
+.custom-swal-popup {
+  background: var(--bg-color)!important;
+}
+
+.custom-swal-confirm {
+  display: inline-flex!important;
+  justify-content: center!important;
+  align-items: center!important;
+  width: 150px!important;
+  height: 100%!important;
+  background-color: var(--hover-color)!important;
+  color: var(--bg-color)!important;
+  font-size: 1rem!important;
+  letter-spacing: 1px!important;
+  font-weight: 600!important;
+  transition: 0.6s!important;
+  box-shadow: var(--neon-box-shadow)!important;
+  border-radius: 5px!important;
+  position: relative!important;
+  overflow: hidden!important;
+  z-index: 1!important;
+  border: 2px solid var(--hover-color)!important;
+  margin-right: 20px;
+}
+
+.custom-swal-confirm:hover {
+  color: var(--hover-color)!important;
+}
+
+.custom-swal-confirm::before {
+  content: ""!important;
+  position: absolute!important;
+  top: 0!important;
+  left: 0!important;
+  background: var(--bg-color)!important;
+  width: 0%!important;
+  height: 100%!important;
+  z-index: -1!important;
+  transition: 0.4s!important;
+}
+
+.custom-swal-confirm:hover::before {
+  width: 100%!important;
+}
+
+.custom-swal-cancel {
+  display: inline-flex!important;
+  justify-content: center!important;
+  align-items: center!important;
+  width: 150px!important;
+  height: 100%!important;
+  background-color: var(--bg-color)!important;
+  color: var(--hover-color)!important;
+  font-size: 1rem!important;
+  letter-spacing: 1px!important;
+  font-weight: 600!important;
+  transition: 0.6s!important;
+  box-shadow: var(--neon-box-shadow)!important;
+  border-radius: 5px!important;
+  position: relative!important;
+  overflow: hidden!important;
+  z-index: 1!important;
+  border: 2px solid var(--hover-color)!important;
+}
+
+.custom-swal-cancel:hover {
+  color: var(--bg-color)!important;
+}
+
+.custom-swal-cancel::before {
+  content: ""!important;
+  position: absolute!important;
+  top: 0!important;
+  left: 0!important;
+  background: var(--hover-color)!important;
+  width: 0%!important;
+  height: 100%!important;
+  z-index: -1!important;
+  transition: 0.4s!important;
+}
+
+.custom-swal-cancel:hover::before {
+  width: 100%!important;
+}
+
 .home-content {
   max-width: 600px;
 }

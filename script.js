@@ -14,6 +14,37 @@ function myFunction() {
   }
 }
 
+const downloadLink = document.getElementById('downloadLink');
+const swalCustomButton = Swal.mixin({
+  customClass: {
+    cancelButton: 'custom-swal-cancel',
+    confirmButton: 'custom-swal-confirm'
+  },
+})
+downloadLink.addEventListener('click', function(event) {
+    event.preventDefault();
+    swalCustomButton.fire({
+        html: '<h3 id="h3">Confirm Download</h3><br><i class="bx bx-question-mark custom-swal-icon"></i><br><br><p id="p">Are you sure you want to download?</p>',
+        icon: null,
+        showCancelButton: true,
+        confirmButtonText: 'Download',
+        cancelButtonText: 'Cancel',
+        customClass: {
+          popup: 'custom-swal-popup',
+          confirmButton: 'custom-swal-confirm',
+          cancelButton: 'custom-swal-cancel',
+          icon: 'custom-swal-icon'
+        }
+    }).then((result) => {
+        if (result.isConfirmed) {
+            const a = document.createElement('a');
+            a.href = "/img/CV (San Yu Aung).pdf";
+            a.download = "CV (San Yu Aung).pdf";
+            a.click();
+        }
+    });
+});
+
 let words = document.querySelectorAll(".word");
 words.forEach((word) => {
   let letters = word.textContent.split("");
