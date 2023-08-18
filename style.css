@@ -758,7 +758,7 @@ section {
 
 .circle {
   width: 100%;
-  height: 120px;
+  height: 180px;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -1069,6 +1069,13 @@ footer a {
     top: 15%;
     right: -5%;
   }
+  .circle {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
 }
 
 @media (max-width: 991px) {
@@ -1117,6 +1124,13 @@ footer a {
   }
   #menu-icon.bx-x {
     transform: rotate(-180deg);
+  }
+  .circle {
+    width: 100%;
+    height: 160px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
   }
   .navlist {
     display: flex;
@@ -1172,6 +1186,13 @@ footer a {
     z-index: -1;
     top: 30%;
     left: -5%;
+  }
+  .circle {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
   }
   html {
     font-size: 80%;
