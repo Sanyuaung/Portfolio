@@ -655,6 +655,11 @@ section {
   animation: css 5s;
 }
 
+.skill-bar .bar .thinkphp {
+  width: 40%;
+  animation: css 5s;
+}
+
 .skill-bar .bar .javascript {
   width: 20%;
   animation: javascript 4s;
@@ -705,6 +710,11 @@ section {
   animation: css 5s;
 }
 
+.skill-bar .bar .linux {
+  width: 50%;
+  animation: css 5s;
+}
+
 .skill-bar .bar .nginx {
   width: 20%;
   animation: css 5s;
@@ -716,6 +726,11 @@ section {
 }
 
 .skill-bar .bar .vue {
+  width: 20%;
+  animation: css 5s;
+}
+
+.skill-bar .bar .uni {
   width: 20%;
   animation: css 5s;
 }
