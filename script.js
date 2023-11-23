@@ -34,7 +34,7 @@ downloadLink.addEventListener('click', function(event) {
         icon: null,
         showCancelButton: true,
         confirmButtonText: 'Download',
-        cancelButtonText: 'Cancel',
+        cancelButtonText: 'View',
         customClass: {
           popup: 'custom-swal-popup',
           confirmButton: 'custom-swal-confirm',
@@ -44,7 +44,13 @@ downloadLink.addEventListener('click', function(event) {
     }).then((result) => {
         if (result.isConfirmed) {
             const a = document.createElement('a');
-            a.href = "/img/CV (San Yu Aung).pdf";
+            a.href = "/img/(San Yu Aung).pdf";
+            a.download = "(San Yu Aung).pdf";
+            a.click();
+        }else{
+          const a = document.createElement('a');
+            a.href = "https://docs.google.com/document/d/1qdoSzNcjO_g1etzvseIELnX-8TGXc_yqhkcfYYynQDM/edit?usp=sharing";
+            a.target = "_blank";
             a.download = "CV (San Yu Aung).pdf";
             a.click();
         }
