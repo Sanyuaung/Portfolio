@@ -14,62 +14,75 @@ function myFunction() {
   }
 }
 
-const downloadLink = document.getElementById('downloadLink');
-const QR = document.getElementById('scanButton');
+const downloadLink = document.getElementById("downloadLink");
+const QR = document.getElementById("scanButton");
 const swalCustomButton = Swal.mixin({
   customClass: {
-    cancelButton: 'custom-swal-cancel',
-    confirmButton: 'custom-swal-confirm'
+    cancelButton: "custom-swal-cancel",
+    confirmButton: "custom-swal-confirm",
   },
-})
+});
 const swalQR = Swal.mixin({
   customClass: {
-    cancelButton: 'custom-swal-cancel',
+    cancelButton: "custom-swal-cancel",
   },
-})
-downloadLink.addEventListener('click', function(event) {
-    event.preventDefault();
-    swalCustomButton.fire({
-        html: '<h3 id="h3">Confirm Download</h3><br><i class="bx bx-question-mark custom-swal-icon"></i><br><br><p id="p">Are you sure you want to download?</p>',
-        icon: null,
-        showCancelButton: true,
-        confirmButtonText: 'Download',
-        cancelButtonText: 'View',
-        customClass: {
-          popup: 'custom-swal-popup',
-          confirmButton: 'custom-swal-confirm',
-          cancelButton: 'custom-swal-cancel',
-          icon: 'custom-swal-icon'
-        }
-    }).then((result) => {
-        if (result.isConfirmed) {
-            const a = document.createElement('a');
-            a.href = "/img/(San Yu Aung).pdf";
-            a.download = "(San Yu Aung).pdf";
-            a.click();
-        }else{
-          const a = document.createElement('a');
-            a.href = "https://docs.google.com/document/d/1qdoSzNcjO_g1etzvseIELnX-8TGXc_yqhkcfYYynQDM/edit?usp=sharing";
-            a.target = "_blank";
-            a.download = "CV (San Yu Aung).pdf";
-            a.click();
-        }
+});
+downloadLink.addEventListener("click", function (event) {
+  event.preventDefault();
+  swalCustomButton
+    .fire({
+      html: '<h3 id="h3">Confirm Action</h3><br><i class="bx bx-question-mark custom-swal-icon"></i><br><br><p id="p">Choose an action:</p>',
+      icon: null,
+      // showCancelButton: true,
+      confirmButtonText: "Download",
+      // cancelButtonText: "Cancel",
+      showDenyButton: true,
+      denyButtonText: "View",
+      customClass: {
+        popup: "custom-swal-popup",
+        confirmButton: "custom-swal-confirm",
+        denyButton: "custom-swal-cancel",
+        // cancelButton: "custom-swal-cancel",
+        icon: "custom-swal-icon",
+      },
+    })
+    .then((result) => {
+      if (result.isConfirmed) {
+        downloadFile();
+      } else if (result.isDenied) {
+        viewFile();
+      }
     });
 });
 
-QR.addEventListener('click', function(event) {
-    event.preventDefault();
-    swalQR.fire({
-        html: '<div><img src="img/QR.png" alt=""></div>',
-        icon: null,
-        showCancelButton: false,
-        showConfirmButton: false,
-        customClass: {
-          popup: 'custom-swal-popup',
-          cancelButton: 'custom-swal-cancel',
-          icon: 'custom-swal-icon'
-        }
-    });
+function downloadFile() {
+  const a = document.createElement("a");
+  a.href = "/img/(San Yu Aung).pdf";
+  a.download = "(San Yu Aung).pdf";
+  a.click();
+}
+
+function viewFile() {
+  const a = document.createElement("a");
+  a.href =
+    "https://docs.google.com/document/d/1qdoSzNcjO_g1etzvseIELnX-8TGXc_yqhkcfYYynQDM/edit?usp=sharing";
+  a.target = "_blank";
+  a.click();
+}
+
+QR.addEventListener("click", function (event) {
+  event.preventDefault();
+  swalQR.fire({
+    html: '<div><img src="img/QR.png" alt=""></div>',
+    icon: null,
+    showCancelButton: false,
+    showConfirmButton: false,
+    customClass: {
+      popup: "custom-swal-popup",
+      cancelButton: "custom-swal-cancel",
+      icon: "custom-swal-icon",
+    },
+  });
 });
 
 let words = document.querySelectorAll(".word");
