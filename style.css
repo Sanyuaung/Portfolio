@@ -74,6 +74,10 @@ header.sticky {
   letter-spacing: 1px;
 }
 
+#qr{
+display: none;
+}
+
 span {
   color: var(--hover-color);
 }
@@ -944,6 +948,7 @@ section {
 .formBtn .btn {
   cursor: pointer;
   font-size: 1rem;
+  margin-right: 15px;
 }
 .message {
   width: 100;

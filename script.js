@@ -15,10 +15,16 @@ function myFunction() {
 }
 
 const downloadLink = document.getElementById('downloadLink');
+const QR = document.getElementById('scanButton');
 const swalCustomButton = Swal.mixin({
   customClass: {
     cancelButton: 'custom-swal-cancel',
     confirmButton: 'custom-swal-confirm'
+  },
+})
+const swalQR = Swal.mixin({
+  customClass: {
+    cancelButton: 'custom-swal-cancel',
   },
 })
 downloadLink.addEventListener('click', function(event) {
@@ -41,6 +47,21 @@ downloadLink.addEventListener('click', function(event) {
             a.href = "/img/CV (San Yu Aung).pdf";
             a.download = "CV (San Yu Aung).pdf";
             a.click();
+        }
+    });
+});
+
+QR.addEventListener('click', function(event) {
+    event.preventDefault();
+    swalQR.fire({
+        html: '<div><img src="img/QR.png" alt=""></div>',
+        icon: null,
+        showCancelButton: false,
+        showConfirmButton: false,
+        customClass: {
+          popup: 'custom-swal-popup',
+          cancelButton: 'custom-swal-cancel',
+          icon: 'custom-swal-icon'
         }
     });
 });
