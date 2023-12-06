@@ -29,30 +29,32 @@ const swalQR = Swal.mixin({
 });
 downloadLink.addEventListener("click", function (event) {
   event.preventDefault();
-  swalCustomButton
-    .fire({
-      html: '<h3 id="h3">Confirm Action</h3><br><i class="bx bx-question-mark custom-swal-icon"></i><br><br><p id="p">Choose an action:</p>',
-      icon: null,
-      // showCancelButton: true,
-      confirmButtonText: "Download",
-      // cancelButtonText: "Cancel",
-      showDenyButton: true,
-      denyButtonText: "View",
-      customClass: {
-        popup: "custom-swal-popup",
-        confirmButton: "custom-swal-confirm",
-        denyButton: "custom-swal-cancel",
-        // cancelButton: "custom-swal-cancel",
-        icon: "custom-swal-icon",
-      },
-    })
-    .then((result) => {
-      if (result.isConfirmed) {
-        downloadFile();
-      } else if (result.isDenied) {
-        viewFile();
-      }
-    });
+  viewFile();
+
+  // swalCustomButton
+  //   .fire({
+  //     html: '<h3 id="h3">Confirm Action</h3><br><i class="bx bx-question-mark custom-swal-icon"></i><br><br><p id="p">Choose an action:</p>',
+  //     icon: null,
+  //     // showCancelButton: true,
+  //     confirmButtonText: "Download",
+  //     // cancelButtonText: "Cancel",
+  //     showDenyButton: true,
+  //     denyButtonText: "View",
+  //     customClass: {
+  //       popup: "custom-swal-popup",
+  //       confirmButton: "custom-swal-confirm",
+  //       denyButton: "custom-swal-cancel",
+  //       // cancelButton: "custom-swal-cancel",
+  //       icon: "custom-swal-icon",
+  //     },
+  //   })
+  //   .then((result) => {
+  //     if (result.isConfirmed) {
+  //       downloadFile();
+  //     } else if (result.isDenied) {
+  //       viewFile();
+  //     }
+  //   });
 });
 
 function downloadFile() {
