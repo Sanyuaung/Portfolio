@@ -199,3 +199,35 @@ window.history.pushState(null, "", window.location.href);
 window.addEventListener("popstate", function (event) {
   window.history.pushState(null, "", window.location.href);
 });
+
+function toggle() {
+  var video = document.querySelector(".video");
+  var videos = document.querySelector("video");
+  video.classList.toggle("active");
+  
+  if (video.classList.contains("active")) {
+    videos.play();
+  } else {
+    videos.pause();
+    videos.currentTime = 0;
+  }
+}
+
+function closeVideoOverlay() {
+  var video = document.querySelector(".video");
+  var videos = document.querySelector("video");
+  video.classList.remove("active");
+  videos.pause();
+  videos.currentTime = 0;
+}
+
+document.querySelector(".video").addEventListener("click", function (event) {
+  // Check if the clicked element is the video element itself
+  if (event.target.tagName.toLowerCase() === 'video') {
+    return;
+  }
+  
+  closeVideoOverlay();
+});
+
+document.querySelector(".btn-box a:last-child").addEventListener("click", toggle);

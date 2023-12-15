@@ -551,6 +551,42 @@ section {
   grid-gap: 2rem;
 }
 
+.section-services .video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+  background-color: rgba(37, 8, 33, 0.95);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.section-services .video.active{
+  visibility: visible;
+  opacity: 1 ;
+}
+
+.section-services .video .close {
+  position: sticky;
+  cursor: pointer;
+  top: 0;
+  padding: 10px;
+  z-index: 1;
+  color: #39ff14;
+}
+
+.section-services .video video {
+  position: relative;
+  max-width: 900px;
+  outline: none;
+}
+
 .section-services .service-box {
   flex: 1 1 18rem;
   padding: 2rem 1rem 2rem;
@@ -1119,6 +1155,9 @@ footer a {
   header,
   header.sticky {
     padding: 15px 5%;
+  }
+  .section-services .video video {
+    max-width: 90%;
   }
   footer {
     padding: 15px 5%;
