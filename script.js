@@ -1,3 +1,11 @@
+document.addEventListener('scroll', function() {
+  var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+  var scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrollPercentage = (scrollTop / scrollHeight) * 100;
+  document.getElementById('progress-container').style.display = 'block';
+  document.getElementById('progress-bar').style.width = scrollPercentage + '%';
+});
+
 function myFunction() {
   var dots = document.getElementById("dots");
   var moreText = document.getElementById("more");
