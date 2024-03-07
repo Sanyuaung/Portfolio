@@ -390,8 +390,17 @@
         </div>
         <div class="skill-bar">
           <div class="info">
+            <p>Laravel Voyager</p>
+            <p>60%</p>
+          </div>
+          <div class="bar">
+            <span class="voyager"></span>
+          </div>
+        </div>
+        <div class="skill-bar">
+          <div class="info">
             <p>Angular</p>
-            <p>40%</p>
+            <p>60%</p>
           </div>
           <div class="bar">
             <span class="angular"></span>
@@ -436,7 +445,7 @@
         <div class="skill-bar">
           <div class="info">
             <p>Linux </p>
-            <p>50%</p>
+            <p>70%</p>
           </div>
           <div class="bar">
             <span class="linux"></span>
@@ -453,8 +462,8 @@
         </div>
         <div class="skill-bar">
           <div class="info">
-            <p>nginx</p>
-            <p>20%</p>
+            <p>Nginx</p>
+            <p>40%</p>
           </div>
           <div class="bar">
             <span class="nginx"></span>
@@ -472,7 +481,7 @@
         <div class="skill-bar">
           <div class="info">
             <p>GitHub</p>
-            <p>80%</p>
+            <p>90%</p>
           </div>
           <div class="bar">
             <span class="git"></span>
@@ -512,6 +521,15 @@
           </div>
           <div class="bar">
             <span class="photoshop"></span>
+          </div>
+        </div>
+        <div class="skill-bar">
+          <div class="info">
+            <p>Power Automate & Power App</p>
+            <p>50%</p>
+          </div>
+          <div class="bar">
+            <span class="power"></span>
           </div>
         </div>
       </div>
@@ -809,10 +827,13 @@
   </section>
   <footer>
     <p class="scroll-scale">
-      Copyright &copy; 2023 by San Yu Aung || All Right Reserved.
+      Copyright &copy; <span id="currentYear"></span> by <span>San Yu Aung</span> || All Right Reserved.
     </p>
     <a href="#home"><i class="bx bx-up-arrow-alt"></i></a>
   </footer>
+  <script>
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+  </script>
   <script src="mixitup.min.js"></script>
   <script src="script.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
