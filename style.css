@@ -739,6 +739,11 @@ section {
   animation: css 5s;
 }
 
+.skill-bar .bar .oracle {
+  width: 60%;
+  animation: css 5s;
+}
+
 .skill-bar .bar .git {
   width: 90%;
   animation: css 5s;
@@ -795,6 +800,11 @@ section {
 }
 
 .skill-bar .bar .vue {
+  width: 20%;
+  animation: css 5s;
+}
+
+.skill-bar .bar .react {
   width: 20%;
   animation: css 5s;
 }
