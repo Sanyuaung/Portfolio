@@ -91,6 +91,17 @@ header.sticky {
   letter-spacing: 1px;
 }
 
+.logo-img{
+  width: 80px;
+  height: 80px;
+  border-radius: 10%;
+  border: 2px solid var(--hover-color);
+  box-shadow: var(--neon-box-shadow);
+  outline: 3px solid var(--bg-color);
+  animation: slideAnimation 1s ease forwards;
+  animation-delay: calc(0.3s * var(--i));
+}
+
 #qr {
   display: none;
 }
@@ -500,7 +511,8 @@ section {
 .info-about1,
 .info-about2,
 .info-about3,
-.info-about4 {
+.info-about4,
+.info-about5 {
   background: var(--bg-color);
   font-size: 0.5rem;
   position: absolute;
@@ -516,8 +528,8 @@ section {
 }
 
 .info-about1 {
-  left: 10%;
-  top: 34%;
+  left: 5%;
+  top: 20%;
 }
 
 .info-about2 {
@@ -533,6 +545,11 @@ section {
 .info-about4 {
   right: 50%;
   top: 70%;
+}
+
+.info-about5 {
+  right: 80%;
+  top: 50%;
 }
 
 .img-about span {
@@ -805,7 +822,7 @@ section {
 }
 
 .skill-bar .bar .react {
-  width: 20%;
+  width: 40%;
   animation: css 5s;
 }
 
